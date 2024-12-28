@@ -1,0 +1,375 @@
+    1  sudo fdisk -1
+    2  sudo fdisk -I
+    3  sudo fdisk
+    4  sudo fdisk -l
+    5  sudo fdisk /dev/sdb
+    6  sudo mkfs.vfat -F 32 /dev/sdb1
+    7  mount | grep /dev/sdb1
+    8  sudo unmount /dev/sdb1
+    9  ipconfig
+   10  ip address
+   11  lsblk
+   12  sudo unmount /dev/sdb
+   13  sudo umount /dev/sdb1
+   14  sudo dd bs=4M if=home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso of=dev/sdb1 status=progress oflag=sync
+   15  sudo dd bs=4M if=Home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso of=dev/sdb1 status=progress oflag=sync
+   16  sudo dd bs=4M if=/home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso of=/dev/sdb1 status=progress oflag=sync
+   17  sudo eject /dev/sdb1
+   18  sudo apt update
+   19  sudo apt install gparted
+   20  sudo apt update
+   21  sudeo apt install virtualbox
+   22  sudo apt install virtualbox
+   23  cd /usr/bin/
+   24  VBoxManage createvm --name "KaliLinuxVM" --ostype Debian_64 --register
+   25  VBoxManage modifyvm "KaliLinuxVM" --memory 2048 --acpi on --boot1 dvd --nic1 nat
+   26  VBoxManage createhd --filename "KaliLinuxVM/KaliLinuxVM.vdi" --size 20480
+   27  VBoxManage storagectl "KaliLinuxVM" --name "IDE Controller" --add ide
+   28  VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 0 --device 0 --type hdd --medium "KaliLinuxVM/KaliLinuxVM.vdi"
+   29  VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/Home/mochene/Downloads/Kali-Linux-ISO.iso"
+   30  # Create the virtual machine
+   31  VBoxManage createvm --name "KaliLinuxVM" --ostype Debian_64 --register
+   32  # Modify virtual machine settings (adjust memory and other settings as needed)
+   33  VBoxManage modifyvm "KaliLinuxVM" --memory 2048 --acpi on --boot1 dvd --nic1 nat
+   34  # Create a virtual hard disk for the VM
+   35  VBoxManage createhd --filename "/home/mochene/VirtualBox VMs/KaliLinuxVM/KaliLinuxVM.vdi" --size 20480
+   36  # Attach the ISO to the VM
+   37  VBoxManage storagectl "KaliLinuxVM" --name "IDE Controller" --add ide
+   38  VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/home/mochene/Downloads/Kali-Linux-ISO.iso"
+   39  VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/Home/mochene/Downloads/Kali-Linux-ISO.iso"
+   40  mochene@mochene:/usr/bin$ VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/Home/mochene/Downloads/Kali-Linux-ISO.iso"
+   41  VBoxManage: error: Could not find file for the medium '/Home/mochene/Downloads/Kali-Linux-ISO.iso' (VERR_FILE_NOT_FOUND)
+   42  VBoxManage: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MediumWrap, interface IMedium, callee nsISupports
+   43  VBoxManage: error: Context: "OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())" at line 197 of file VBoxManageDisk.cpp
+   44  VBoxManage: error: Invalid UUID or filename "/Home/mochene/Downloads/Kali-Linux-ISO.iso"
+   45  mochene@mochene:/usr/bin$ 
+   46  cd /Home
+   47  cd ..
+   48  ls
+   49  cd home
+   50  cd mochene
+   51  ls
+   52  cd Downloads
+   53  ls
+   54  cd ..
+   55  ls
+   56  cd ..
+   57  ls
+   58  cd usr
+   59  cd bin
+   60  [200~sudo VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso"
+   61  sudo VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso"
+   62  su -
+   63  sudo VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/Home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso"
+   64  sudo VBoxManage storageattach "KaliLinuxVM" --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "/home/mochene/Downloads/kali-linux-2024.2-installer-amd64.iso"
+   65  pwd
+   66  cd usr
+   67  pwd
+   68  cd ..
+   69  pwd
+   70  ls
+   71  cd /usr
+   72  ls
+   73  cd /share
+   74  cd share
+   75  cd plymouth
+   76  cd themes
+   77  ls
+   78  sudo cp -r ubuntu-logo ubuntu-logo-backup
+   79  sudo cp -r ubuntu-text ubuntu-text-backup
+   80  ls -l
+   81  Edit the Plymouth Configuration File:
+   82  ls
+   83  cd ubuntu-logo
+   84  cd /usr/share/plymouth/themes/ubuntu-text
+   85  ls -l
+   86  sudo nano ubuntu-text.plymouth
+   87  gnome-disk
+   88  gnome-disks
+   89  sudo apt update
+   90  sudo apt install cups
+   91  sudo usermod -a -G lpadmin $(whoami)
+   92  apt-get install git
+   93  sudo apt-get install git
+   94  apt update
+   95  sudo apt-get update
+   96  clear
+   97  sudo wget -q -O - https://screenrec.com/download/pub.asc | sudo apt-key add -
+   98  sudo add-apt-repository 'deb https://screenrec.com/download/ubuntu stable main'
+   99  sudo apt update
+  100  sudo apt install screenrec~
+  101  clear
+  102  sudo apt-get update
+  103  sudo apt-get install -y docker.io
+  104  sudo systemctl start docker
+  105  sudo systemctl enable docker
+  106  sudo usermod -aG docker $USER
+  107  sudo reboot
+  108  pwd
+  109  ls
+  110  cd Desktop
+  111  pwd
+  112  git clone https://github.com/maejor101/W.I.L-capstone.git
+  113  ls
+  114  cd W.I.L-capstone
+  115  ls
+  116  code .
+  117  sudo snap install code
+  118  sudo snap install code --classic
+  119  sudo curl -L "https://github.com/docker/compose/release/downloads/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  120  sudo snap install curl
+  121  curl --version
+  122  sudo curl -L "https://github.com/docker/compose/release/downloads/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  123  sudo ls -ld /usr/local/bin
+  124  curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')/docker-compose-$(uname -s)-$(uname -m)" -o ~/docker-compose
+  125  sudo mv ~/docker-compose /usr/local/bin/docker-compose
+  126  sudo chmod +x /usr/local/bin/docker-compose
+  127  docker-compose --version
+  128  ls
+  129  cd Desktop
+  130  ls
+  131  cd W.I.L-capstone
+  132  ls
+  133  docker-compose -f docker-compose.dev.yml up -d
+  134  sudo systemctl status docker
+  135  npm start
+  136  sudo apt install npm
+  137  npm start
+  138  sudo apt-get install npm
+  139  sudo apt-get update
+  140  sudo apt-get install npm
+  141  npm start
+  142  npm install next
+  143  npm start
+  144  NEXT BUILD
+  145  next build
+  146  git --version
+  147  git config --global user.email "tshegofatsopromise362@gmail.com"
+  148  git clolne https://github.com/MonamaTV/video-trimmer
+  149  git clone https://github.com/MonamaTV/video-trimmer
+  150  npm run dev
+  151  git checkout promise
+  152  git checkout "Promise"
+  153  git branch Promise
+  154  git checkout Promise
+  155  git pull origin main
+  156  npm run dev
+  157  node -v
+  158  npm install node
+  159  node -v
+  160  nvm list
+  161  npm install -g npm@latest
+  162  npm install -g n
+  163  git checkout -b Promise
+  164  node -v
+  165  npm install node
+  166  npm run dev
+  167  git pull origin main
+  168  npm run dev
+  169  git pull origin main
+  170  npm run dev
+  171  npm install next
+  172  npm run dev
+  173  git branch Frontend
+  174  git checkout Frontend
+  175  git clone https://github.com/maejor101/VedCut.git
+  176  Promisemagoga
+  177  git clone https://github.com/maejor101/VedCut.git
+  178  npm run dev
+  179  git pull origin main
+  180  npm run dev
+  181  npm install @mui/icons-material @mui/material @emotion/react @emotion/styled
+  182  git checkout -b Frontend
+  183  git add .
+  184  git commit -m "Created SignIn and SignUp Screen"
+  185  git push -u Frontend
+  186  git push 
+  187  git push --set-upstream origin Frontend
+  188  npm run dev
+  189  git pull origin main
+  190  git config pull.ff only
+  191  git pull origin main
+  192  git rebase
+  193  git add . 
+  194  git commit -m "04/11/2024"
+  195  git rebase
+  196  git pull origin main
+  197  git stash
+  198  git pull
+  199  git stash pop
+  200  git pull origin main
+  201  git stash
+  202  git pull
+  203  git pull origin trim-split
+  204  git add .
+  205  git commit -m "04/11/2024"
+  206  git push
+  207  git pull origin main
+  208  git add .
+  209  git commit -m "04/11/2024"
+  210  git push
+  211  clear
+  212  npm run dev
+  213  npm i uuid
+  214  npm i jszip
+  215  git pull origin main
+  216  npm run dev
+  217  npm install
+  218  git add .
+  219  git commit -m "06/11/2024"
+  220  git pull origin main
+  221  git push
+  222  git pull origin main
+  223  git switch main
+  224  git pull
+  225  git switch Frontend
+  226  git fetch origin
+  227  git merge origin
+  228  npm run dev
+  229  npm install
+  230  npm run dev
+  231  git clone https://github.com/maejor101/VedCut.git
+  232  git pull origin main
+  233  git add .
+  234  git commit -m "06/11/2024"
+  235  git push
+  236  git pull origin main
+  237  npm run dev
+  238  node task1.js
+  239  node task2.js
+  240  node task3.js
+  241  node task4.js
+  242  node task5.js
+  243  node task6.js
+  244  node task7.js
+  245  node task8.js
+  246  node task9.js
+  247  node task10.js
+  248  ls
+  249  ls /
+  250  pwd
+  251  /Desktop
+  252  cd Desktop
+  253  ls
+  254  cd Umuzi-Bootcamp
+  255  mkdir
+  256  mkdir new-task
+  257  ls
+  258  cd ..
+  259  ls
+  260  cd ../../
+  261  cd mochene
+  262  cd Desktop
+  263  ls
+  264  cd Umuzi-Bootcamp
+  265  cd ../../
+  266  cd Desktop
+  267  cd Umuzi-Bootcamp
+  268  cd home
+  269  man ls
+  270  cd Desktop
+  271  ls
+  272  cd Umuzi-Bootcamp
+  273  cd Desktop
+  274  ls
+  275  cd Umuzi-Bootcamp
+  276  mkdir git-basic-exercises
+  277  cd git-basic-exercises
+  278  ls -a
+  279  git init
+  280  ls -a
+  281  git status
+  282  touch README..md
+  283  ls -a
+  284  git status
+  285  git log
+  286  git add .
+  287  git status
+  288  git commit -m "initial commit"
+  289  git log
+  290  nano README.md
+  291  cat READ.md
+  292  cat README.md
+  293  git status
+  294  git commit -m "Second commit"
+  295  nano README.md
+  296  git log
+  297  git add .
+  298  git commit -m "Third commit"
+  299  git log
+  300  cd ..
+  301  cd Desktop
+  302  ls
+  303  cd Umuzi-Bootcamp
+  304  mkdir git-basic-exercises
+  305  cd git-basic-exercises
+  306  ls
+  307  ls -a
+  308  git init
+  309  ls -a
+  310  git status
+  311  git log
+  312  git add
+  313  git add .
+  314  git status
+  315  git commit -m "initial commit"
+  316  git log
+  317  nano README.md
+  318  cat README.md
+  319  git status
+  320  git add .
+  321  git commit -m "Second commit"
+  322  nano README.md
+  323  git add .
+  324  git commit -m "Third commit"
+  325  git log
+  326  cd Desktop
+  327  ls -a
+  328  cd Umuzi-Bootcamp
+  329  mkdir git-basic-exercises
+  330  ls -a
+  331  cd git-basic-exercises
+  332  ls -a
+  333  git init
+  334  ls -a
+  335  git status
+  336  git log
+  337  touch README.md
+  338  ls -a
+  339  git status
+  340  git add .
+  341  git commit -m "initial commit"
+  342  git status
+  343  git log
+  344  nano README.md
+  345  git status
+  346  git add .
+  347  git commit m "Second commit"
+  348  git commit -m "Second commit"
+  349  git status
+  350  nano README.md
+  351  git status
+  352  git add .
+  353  git commit -m "Third commit"
+  354  git log
+  355  qh
+  356  q
+  357  git checkout f61b956f116f2d9c8159717c9b4cb1d8d70886c0
+  358  cat README.md
+  359  git checkout main
+  360  cat README.md
+  361  git branch
+  362  git checkout master
+  363  cat README.md
+  364  git checkout -b milkshake-flavours
+  365  git branch
+  366  nano milkshakes.md
+  367  git status
+  368  git add .
+  369  git commit -m "Added initial flavours"
+  370  git log
+  371  git checkout master
+  372  git checkout -b history
+  373  git log
+  374  git branch
+  375  history > history.txt
